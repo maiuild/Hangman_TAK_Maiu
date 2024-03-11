@@ -62,7 +62,9 @@ class Controller:
         # TODO on mäng läbi. MEETOD siin samas klassis.
 
         if self.__model.wrong_guesses == 11:
-            self.btn_cancel_click()
+             self.__game_time.stop()
+            self.__view.change_image(-1)
+            self.buttons_no_game()
             show_message('lose')    # View all on show_message
             return
         self.__model.process_user_input(self.__view.char_input.get())
