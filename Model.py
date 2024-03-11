@@ -164,7 +164,7 @@ class Model:
             cursor = connection.cursor()
             cursor.execute(
                 'INSERT INTO scores (name, word, missing, seconds, date_time) VALUES (?, ?, ?, ?, ?);',
-                (player_name, self.random_word, self.list_to_string(),
+                (player_name, self.random_word, self.list_to_string().upper(),
                  time_counter, current_time))
             connection.commit()
         except sqlite3.Error as error:
