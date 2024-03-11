@@ -66,7 +66,7 @@ class Controller:
             show_message('lose')    # View all on show_message
             return
         self.__model.process_user_input(self.__view.char_input.get())
-        self.__view.lbl_result.config(text=self.__model.hidden_word)
+        self.__view.lbl_result.config(text=self.__model.hidden_word.upper())
         vigased = "Vigased tähed: " + self.__model.list_to_string().upper()
         self.__view.lbl_error.config(text=vigased, fg="red")
         self.__view.char_input.delete(0, 'end')
