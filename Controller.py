@@ -61,7 +61,7 @@ class Controller:
         # TODO KUI on vigu tekkinud, muuda alati vigade tekst punaseks ning näita vastavalt vea numbrile õiget pilti
         # TODO on mäng läbi. MEETOD siin samas klassis.
 
-        if self.__model.wrong_guesses == 11:
+        if self.__model.wrong_guesses == 10:
             self.__game_time.stop()
             self.__view.change_image(-1)
             self.buttons_no_game()
